@@ -106,7 +106,7 @@ Dane dotyczące produktów, kategorii, slidera oraz zamówień pochodzą bezpoś
 
 Wszystkie treści w aplikacji zostały przygotowane w języku polskim, ponieważ projekt może w przyszłości stać się pełnoprawnym sklepem internetowym działającym na terenie Polski. Dla zachowania czytelności i zgodności z dobrymi praktykami, identyfikatory w kodzie (zmienne, klucze i inne identyfikatory) zapisano w języku angielskim, zaś ścieżki - w celu zgodności z wersją językową aplikacji - w języku polskim.
 
-Autorką wszystkich grafik jest **Marta Stalmach** natomiast inspiracji dotyczących layoutu i designu dostarczyło https://studioblogo.pl/
+Autorką wszystkich grafik jest Marta Stalmach natomiast inspiracji dotyczących layoutu i designu dostarczyło https://studioblogo.pl/
 ---
 
 ## Autor projektu
