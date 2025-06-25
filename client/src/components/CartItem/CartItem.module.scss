@@ -1,0 +1,208 @@
+@use '../../styles/global.scss' as *;
+
+.row {
+  display: grid;
+  grid-template-columns: 40px 1fr 120px 120px 120px;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid $color-border;
+  position: relative;
+}
+
+.remove {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: $color-text;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.toRemove .remove {
+  color: $black;
+  font-weight: bold;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.product {
+  display: flex;
+  gap: 1rem;
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 1px solid $color-border;
+    background-color: $color-bg-muted;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: 0.5rem;
+  }
+
+  .note {
+    font-size: 14px;
+    padding: 0.25rem;
+    border: 1px solid $color-border;
+    background-color: $color-bg;
+    resize: vertical;
+    width: 95%;
+    height: auto;
+    min-height: 40px;
+    max-width: 300px;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      min-height: 80px;
+    }
+  }
+}
+
+.price,
+.qty,
+.total {
+  font-size: 14px;
+  color: $color-text;
+}
+
+.qty {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 60px;
+    padding: 0.25rem;
+    font-size: 14px;
+    border: 1px solid $color-border;
+    text-align: center;
+  }
+}
+
+.toRemove {
+  opacity: 0.5;
+  background-color: $color-border;
+  margin-bottom: 0;
+
+  .name {
+    text-decoration: line-through;
+  }
+
+  input,
+  textarea {
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.info {
+  display: none;
+}
+
+.undoRowMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .remove {
+    align-self: flex-end;
+    margin-bottom: -1rem;
+  }
+
+  .toRemove .remove {
+    display: none;
+  }
+
+  .product {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+    }
+
+    .details {
+      width: 100%;
+    }
+
+    .note {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .price,
+  .qty,
+  .total {
+    display: none;
+  }
+
+  .info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+    font-size: 14px;
+    color: $color-text;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .label {
+    font-weight: 600;
+    justify-self: center;
+  }
+
+  .value,
+  input {
+    justify-self: center;
+  }
+
+  .info input {
+    width: 60px;
+    padding: 0.25rem;
+    font-size: 14px;
+    border: 1px solid $color-border;
+    text-align: center;
+  }
+}

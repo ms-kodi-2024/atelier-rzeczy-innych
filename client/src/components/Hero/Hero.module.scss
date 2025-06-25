@@ -1,0 +1,64 @@
+@use '../../styles/global.scss' as *;
+
+@import '@fontsource/poppins/600.css';
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 3rem;
+  overflow: hidden;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $color-primary;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 45px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $gray-light;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .subtitle {
+    font-size: 16px;
+    letter-spacing: 8px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  .subtitle {
+    font-size: 14px;
+    letter-spacing: 6px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}

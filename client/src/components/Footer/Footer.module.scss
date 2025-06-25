@@ -1,0 +1,59 @@
+@use '../../styles/global.scss' as *;
+
+.footer {
+  text-align: center;
+  padding: 5rem;
+  background: $white;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  a {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $color-text;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  a {
+    width: 48px;
+    height: 48px;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+}
+
+.email {
+  font-size: 14px;
+  color: $gray-light;
+  font-style: italic;
+}

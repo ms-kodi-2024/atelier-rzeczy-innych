@@ -1,0 +1,155 @@
+@use '../../styles/global.scss' as *;
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  gap: 3rem;
+  justify-content: center;
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    align-items: center;
+
+    .left,
+    .right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+.left {
+  flex: 1;
+  max-width: 500px;
+
+  .mainImage {
+    width: 100%;
+    height: 500px;
+    background-color: $color-bg-muted;
+    margin-bottom: 1rem;
+
+    .fade {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0;
+      animation: fadeIn 0.5s forwards;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .thumbnails {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid $color-border;
+      transition: border-color 0.3s;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        border-color: $color-primary;
+      }
+
+      &.active {
+        border-color: $color-primary;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color-primary, 0.4);
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.right {
+  flex: 1;
+  max-width: 500px;
+
+  .name {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: $color-text;
+    text-transform: uppercase;
+  }
+
+  .price {
+    font-size: 24px;
+    color: $color-primary;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 14px;
+    color: $gray-dark;
+    margin-bottom: 2rem;
+  }
+
+  .notice {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    color: $color-text;
+  }
+
+  .unavailable {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-text;
+    margin-bottom: 2rem;
+  }
+
+  .cartRow {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    .qty {
+      width: 60px;
+      padding: 0.5rem;
+      border: 1px solid $color-border;
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  padding: 4rem;
+  text-align: center;
+  font-size: 18px;
+  color: $color-text;
+}

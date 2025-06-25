@@ -1,0 +1,100 @@
+@use '../../styles/global.scss' as *;
+
+.wrapper {
+  position: relative;
+  padding: 0;
+  overflow: visible;
+
+  :global(.carousel),
+  :global(.carousel-inner) {
+    overflow: visible;
+  }
+
+  :global(.carousel-control-prev),
+  :global(.carousel-control-next) {
+    opacity: 0.8;
+    width: 5%;
+    z-index: 5;
+  }
+}
+
+.fixedSize {
+  :global(.carousel-item) {
+    height: 430px !important;
+    overflow: hidden;
+    background-color: $color-bg-muted;
+    position: relative;
+  }
+
+  :global(.carousel-item img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.customDots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 6;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 50%;
+  background-color: $color-primary;
+  opacity: 0.6;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($color-primary, 0.5);
+  }
+}
+
+.active {
+  background-color: $color-text !important;
+  opacity: 1;
+}
+
+.slideLinkItem {
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+
+  :global(img) {
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover {
+    :global(img) {
+      opacity: 0.95;
+    }
+  }
+}
+
+.slideItem {
+  position: relative;
+}
+
+.slideLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+@media (max-width: 575.98px) {
+  .wrapper {
+    display: none;
+  }
+}

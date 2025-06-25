@@ -1,0 +1,65 @@
+@use '../../styles/global.scss' as *;
+
+.header {
+  background-color: $color-bg;
+  position: relative;
+  z-index: 100;
+}
+
+.logo img {
+  max-height: 100px;
+  width: auto;
+}
+
+.link {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: $color-text-header;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.icon {
+  transition: transform 0.2s ease;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: $white;
+  padding: 0.5rem 0;
+  list-style: none;
+  border-top: 2px solid $black;
+  min-width: 180px;
+  z-index: 200;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menuItem {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: $color-text;
+
+  &:hover {
+    background: $gray-bg;
+    color: $color-primary;
+  }
+}

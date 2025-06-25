@@ -1,0 +1,113 @@
+@use '../../styles/global.scss' as *;
+
+.wrapper {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 32px;
+  color: $color-text;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.subheading {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+  color: $color-text;
+}
+
+.orderNumber {
+  font-size: 14px;
+  color: $color-text;
+  margin-bottom: 2rem;
+}
+
+.customerData {
+  text-align: left;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      font-size: 14px;
+      color: $color-text;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+.summary {
+  text-align: left;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 20px;
+    color: $color-text;
+    margin-bottom: 1rem;
+  }
+
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid $color-border;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .item {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    font-size: 14px;
+    color: $color-text;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-border;
+    }
+  }
+
+  .productInfo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .itemNote {
+    white-space: pre-line;
+    color: $gray-dark;
+  }
+
+  .qty,
+  .value {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    white-space: nowrap;
+  }
+
+  .total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 1rem;
+    color: $color-text;
+  }
+}
