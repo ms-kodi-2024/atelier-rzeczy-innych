@@ -11,7 +11,7 @@ import { OrdersModule } from './orders/orders.module';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'client', 'build'),
+      rootPath: join(process.cwd(), 'client', 'build'),
     }),
     ProductsModule,
     CategoriesModule,
