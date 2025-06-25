@@ -93,7 +93,7 @@ REACT_APP_API_URL=http://localhost:5000
 ## Deployment
 
 The frontend is served by the backend using `ServeStaticModule`.  
-Deployment link: **COMING SOON**
+Deployment link: https://atelier-rzeczy-innych.onrender.com/
 
 ---
 

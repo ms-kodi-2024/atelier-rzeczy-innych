@@ -93,7 +93,7 @@ REACT_APP_API_URL=http://localhost:5000
 ## Publikacja
 
 Frontend jest serwowany przez backend za pomocą `ServeStaticModule`. 
-Link do publikacji: **WKRÓTCE**
+Link do publikacji: https://atelier-rzeczy-innych.onrender.com/
 
 ---
 
