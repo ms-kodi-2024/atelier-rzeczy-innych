@@ -1,5 +1,5 @@
 # === BACKEND ===
-# /dist
+dist/tsconfig.build.tsbuildinfo
 /node_modules
 
 # Logs
@@ -42,5 +42,4 @@ lerna-debug.log*
 
 # === FRONTEND (client) ===
 /client/node_modules
-# /client/build
 /client/.env
